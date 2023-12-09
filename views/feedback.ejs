@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pintrest </title>
+    <link rel="stylesheet" href="/stylesheets/feedback.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+      </div>
+      <ul class="links" >
+        <%if(user){ %>
+          <li class="link"><a href="/Profile">Profile</a></li>
+        <li class="link"><a href="/logout">Log Out</a></li>
+  
+        <% } else{ %>
+          <li class="link"><a href="/login">Sign In</a></li>
+        <li class="link"><a href="/">Sign Up</a></li>
+        <% } %>
+      
+      </ul>
+    </nav>
+
+    <div class="container1">
+        
+      <% post.forEach(function(post){ %>  
+            
+        <div class="content-wrapper">
+          <div class="image-wrapper">
+            <div class="overlay">
+            <div>
+              <p><%=post.user.username %></p>
+              <a style="text-decoration: none;" href="/download" class="save">Save</a>
+            </div>
+            <div>
+              <button class="spheric-button">
+                twitter.com
+              </button>
+              <button class="round-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/3580/3580382.png" alt="">
+              </button>
+              <button class="round-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/512/512142.png" alt="">
+              </button>
+            </div>
+          </div>
+             <img src="/images/uploads/<%= post.image %>" alt="">
+          </div>
+          <p><%= post.imageText %></p>
+        </div>
+     
+      <% })%>
+    </div>
+<% include ./partials/footer.ejs %>
