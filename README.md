@@ -32,7 +32,7 @@ Before you begin, make sure you have the following installed on your machine:
 
    
 This command will start the development server, and you can access the Pinterest clone in your web browser at http://localhost:3000.
-ontributing
+##Contributing
 
 If you'd like to contribute to this project, please follow these steps:
 
