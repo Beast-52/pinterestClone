@@ -37,9 +37,9 @@ This command will start the development server, and you can access the Pinterest
 
 If you'd like to contribute to this project, please follow these steps:
 
-    Fork the repository on GitHub.
-    Clone your forked repository locally.
-    Create a new branch for your feature or bug fix.
-    Make your changes and commit them with descriptive messages.
-    Push your changes to your GitHub repository.
-    Submit a pull request to the main repository. 
+       Fork the repository on GitHub.
+       Clone your forked repository locally.
+       Create a new branch for your feature or bug fix.
+       Make your changes and commit them with descriptive messages.
+       Push your changes to your GitHub repository.
+       Submit a pull request to the main repository. 
