@@ -2,7 +2,8 @@
 
 ---
 title: "Pinterest Clone Setup Guide"
-output: html_document
+author: "Beast-52"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
 ---
 
 # Pinterest Clone Setup Guide
