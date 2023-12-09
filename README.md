@@ -3,7 +3,7 @@
 ---
 title: "Pinterest Clone Setup Guide"
 author: "Beast-52"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+date: "9-12-2023"
 ---
 
 # Pinterest Clone Setup Guide
