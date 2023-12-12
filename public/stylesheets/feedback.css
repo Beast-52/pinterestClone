@@ -64,11 +64,12 @@
   }
   .container1 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
     column-gap: 1em;
     padding: 2em;
-    place-items: center;
+    justify-items: center;
+    align-items: start;
     width: 96%;
     margin: auto;
   }

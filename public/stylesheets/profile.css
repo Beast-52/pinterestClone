@@ -23,10 +23,8 @@ html,body {
   .containerper {
     margin: 0 auto;
     background: rgb(39 39 42);;;
-    
-    padding: 20px;
-    
-    
+    padding: 20px;  
+    width: 90%;
 }
 form{
  display: flex ;
@@ -34,7 +32,7 @@ form{
  justify-content: center;
  gap: 20px;
  padding: 10px 0px;
- background: rgb(39 39 42);;;
+ background: rgb(39 39 42);
 
  margin: 20px 0px; 
 
