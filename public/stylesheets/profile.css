@@ -13,21 +13,19 @@ html,body {
  }
  nav{
   display: flex;
-  align-items: center;
-
-  justify-content: space-between;
-  
+  align-items: center !important;
+  justify-content: space-between !important;
  }
 
  .uploadImg{
   color: black;width: 100% ; height: 100%;margin:40px 50px  ;
  }
   .containerper {
-    max-width: 80%;
     margin: 0 auto;
     background: rgb(39 39 42);;;
-
+    
     padding: 20px;
+    
     
 }
 form{
@@ -41,17 +39,57 @@ form{
  margin: 20px 0px; 
 
 }
+
+
+/* CSS */
+.button-41 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+
+  z-index: 9;
+  border: 0;
+}
+.button-41:nth-child(2){
+  background: #e60023;
+}
+
+.button-41:hover {
+  background: #018a4c;
+}
+.button-41:nth-child(2):hover {
+  background: #bb021e;
+}
 .cardper {
   
     background: rgb(39 39 42);;;
     color: white;
 
-    width: 70vw;
+    width: 80vw;
     margin: auto;
     border-radius: 5px;
-    padding: 20px;
+    
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
+   padding: 30px 0;
   }
   .prof-det{
     position: relative;
@@ -154,6 +192,10 @@ form{
     overflow: hidden;
    
   }
+  .input{
+    padding: 10px 20px; 
+    color: black !important;
+  }
   .card{
     object-fit: contain;
     object-position:center center ;
@@ -165,5 +207,25 @@ form{
   @media (max-width:400px) {
     .cardper{
       width: 100vw;
+    }
+    .containerper{
+      margin-top: 30vh !important;
+     width: 80vw !important;
+     margin-left: -20px;
+      box-shadow: none;
+    }
+    
+  }
+  @media (max-width:800px) {
+    .form1{
+      flex-direction: column;
+      width: 75%;
+    }
+   
+    .containerper form{
+      flex-direction: column;
+    }
+    .containerper form button,.form1 button{
+      width: 75%;
     }
   }

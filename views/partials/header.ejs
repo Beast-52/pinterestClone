@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Pintrest <%if(user){%>
+        <%=user.username%>
+    <%}%> </title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link rel="icon" href="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png">
+    <link rel="stylesheet" href="/stylesheets/feedback.css" >
+  </head>
+
+  <body>
+    <nav style="position: fixed;top: 0;left: 0;">
+      <div class="logo">
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+      </div>
+      <ul class="links" >
+        <%if(user){ %>
+        <li class="link"><a href="<%=href%>"><%=title%></a></li>
+        <li class="link"><a href="/logout">Log Out</a></li>
+  
+        <% } else{ %>
+          <li class="link"><a href="/login">Sign In</a></li>
+        <li class="link"><a href="/">Sign Up</a></li>
+        <% } %>
+      
+      </ul>
+    </nav>
+    

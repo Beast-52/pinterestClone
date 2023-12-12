@@ -24,8 +24,10 @@ router.get('/logout', function(req, res, next){
 
 router.get('/feedback',async (req,res)=>{
   const post = await postsModel.find().populate('user')
+  const title = 'Profile';
+  const href  = '/profile'
   console.log(post)
-  res.render('feedback',{ post,user:req.user})
+  res.render('feedback',{ post,user:req.user,title,href})
 })
 
 router.post('/fileupload',isLoggedIn,upload.single('image'), async(req,res)=>{
@@ -40,7 +42,9 @@ router.get('/profile',isLoggedIn ,async function(req, res, next) {
     username: req.session.passport.user
   })
   .populate('posts')
-  res.render('profile',{user})
+  const title = 'Feedback';
+  const href  = '/feedback'
+  res.render('profile',{user,title,href})
 });
 
 router.post('/upload', isLoggedIn ,upload.single('file'),async(req,res)=>{
@@ -95,6 +99,16 @@ router.post('/register',(req,res)=>{
 
 })
 
+router.get('/delete/post:id',isLoggedIn ,async (req, res) => {
+  const postId = await postsModel.findOne({_id:req.params.id})
+  try {
+    // Find and remove the post by ID
+    const deletedPost = await postsModel.findByIdAndDelete(postId);
+    res.redirect('/profile')
+  } catch (error) {
+    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  }
+});
 
 
 function isLoggedIn(req, res, next){
