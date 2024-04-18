@@ -70,7 +70,7 @@ router.get('/download',isLoggedIn ,async function(req, res, next) {
     username: req.session.passport.user
   })
   .populate('posts');
-   const downloadfile = 'H:/ONLINE WORKINH/Programming Lectures/Web Development/Practical/Back ENd/Projects/pinterestClone/public/images/uploads/'+user.posts[0].image;
+   const downloadfile = __dirname+'/public/images/uploads/'+user.posts[0].image;
 
   res.download(downloadfile)
 });
